@@ -9,4 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
     function darkModeToggle(page) {
         page.classList.toggle('dark-mode');  
     };
+    
+    let images = document.querySelectorAll('img');
+    images.forEach(function(img) {
+        img.addEventListener('click', function() {
+            let that = this;
+            window.open(that.src, '_blank');
+        });
+    });
 });
